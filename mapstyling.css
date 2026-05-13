@@ -1,0 +1,109 @@
+/* Reset and base */
+* {box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+/* map fills the whole viewport with this */
+#map {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+}
+
+/* station Markers */
+.bart-marker{
+  width: 14px;
+  height: 14px;
+  border-radius: 55%;
+  background-color: #fff;
+  border: 1px solid #333;
+  cursor: pointer;
+  
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.bart-marker:hover{
+  transform: scale(1.8);
+  background: #FFD800;
+  border-color: #fff;
+}
+
+.bart-marker:selected{
+    background: #FFD800;
+    border-color: #fff;
+    transform: scale(1.4);
+}
+
+.popup #name {
+    font-size: 25px;
+    display: block;
+}
+
+.popup #location {
+  display: block;
+}
+
+section {
+  display: inline;
+}
+
+/*popups */
+.popup {
+  position: fixed;
+    z-index: 10;
+    width: 180px;
+    background-color: #1a1a2e;
+    color: #fff;
+    text-align: left;
+    border-radius: 8px;
+    padding: 12px 14px;
+    border: 1px solid rgba(255,255,255,0.15);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    font-size: 13px;
+    line-height: 1.8;
+}
+/* Popup 1: bottom-left */
+#popup1 {
+    bottom: 24px;
+    left: 24px;
+}
+ 
+/* Popup 2: bottom-right */
+#popup2 {
+    bottom: 24px;
+    right: 24px;
+}
+ 
+.popup #name, .popup #name2 {
+    font-size: 15px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 2px;
+    color: #FFD800;
+}
+ 
+.popup #location, .popup #location2 {
+    display: block;
+    color: rgba(255,255,255,0.6);
+    font-size: 11px;
+    margin-bottom: 8px;
+}
+ 
+section {
+    display: inline;
+}
+
+      /*
+      BART line colors 
+      --bart-blue:   #2196F3;
+      --bart-orange: #FF6D00;
+      --bart-red:    #E53935;
+      --bart-yellow: #FDD835;
+      --bart-green:  #43A047;
+      --bart-beige:  #BCAAA4;
+      */

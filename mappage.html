@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>BART Live Map</title>
+        <link href="https://api.mapbox.com/mapbox-gl-js/v3.4.0/mapbox-gl.css" rel="stylesheet">
+        <script src="https://api.mapbox.com/mapbox-gl-js/v3.4.0/mapbox-gl.js"></script>
+        <link rel="stylesheet" href="mapstyling.css">
+    </head>
+    <body>
+        <div id="map"></div>
+        
+        <!-- First popup shows actual time info -->
+
+        <div class="popup" id="popup1" hidden>            
+            <p>
+        
+                <section id="name"></section> 
+                <section id="location"></section>
+                Departure for: <section id="arrival"></section><br>
+                Time leaving: <section id="etd"></section><br>
+                <section id="eta"></section>
+                <section id="transfers"></section>
+            </p>
+        
+        </div>
+
+        <!-- 2nd popup determines fares from 1st station to 2nd station-->
+
+        <div class="popup" id="popup2" hidden>
+
+            <p>
+                <section id="name2"></section> 
+                <section id="location2"></section>
+                
+                Standard Clipper fare: <section class="fare" id="clipper"></section><br>
+                Senior/Disabled fare: <section class="fare" id="rtcclipper"></section><br>
+                Student fare: <section class="fare" id="student"></section><br>
+                Clipper START fare: <section class="fare" id="start"></section><br>
+
+            </p>
+        
+        </div>
+        
+            <script src="mapscript.js"></script>
+  
+        </div>
+    
+    </body>
+
+</html>
